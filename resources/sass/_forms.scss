@@ -1,0 +1,251 @@
+:root {
+  --input-text: 0.9rem;
+  --label-text: 0.9rem;
+  --form-title: 1.5rem;
+  --form-description: 1rem;
+
+  @include from(xlg) {
+    --input-text: 1rem;
+    --label-text: 1rem;
+    --form-title: 2rem;
+    --form-description: 1.1rem;
+  }
+}
+
+// Reset default styles
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+// Custom input styles
+.mat-label {
+  color: $ecotec-desatured-gray;
+  display: block;
+  font-size: var(--label-text);
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+.mat-input {
+  border: 0 !important;
+  border-bottom: 2px solid $ecotec-gray !important;
+  color: $ecotec-darkgray !important;
+  display: block !important;
+  font-size: var(--input-text) !important;
+  font-weight: 500 !important;
+  outline: 0 !important;
+  transition: border-color 0.2s !important;
+  width: 100% !important;
+  padding: 0.5em !important;
+  margin: 0 !important;
+  background: transparent;
+
+  &:focus {
+    border-bottom: 2px solid $ecotec-skyblue !important;
+  }
+}
+
+.mat-input--select {
+  background-image: url(/images/icons/arrow-down.png);
+  background-position: right 0.5em center;
+  background-repeat: no-repeat;
+  padding-right: 1em;
+}
+
+.mat-input--file {
+  padding: 0 !important;
+  width: auto !important;
+  display: inline !important;
+  border: 0 !important;
+  padding-top: 0.5rem !important;
+  &:focus {
+    border: 0 !important;
+  }
+}
+
+.form__title {
+  font-size: var(--form-title);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.form__description {
+  font-size: var(--form-description);
+  color: $ecotec-darkgray;
+}
+
+.form__help {
+  font-size: 0.8rem;
+  // color: $ecotec-blue;
+  font-weight: 500;
+  color: #9e579d;
+  display: block !important;
+
+  .keyword-help {
+    font-weight: 700;
+  }
+}
+
+// Forms
+
+.form__container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @include from(md) {
+    margin-top: 4rem;
+  }
+}
+
+.form__container--narrow {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include from(lg) {
+    width: 60%;
+  }
+}
+
+// Forms grid
+
+.form-grid--principal {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+
+  @include from(md) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.form-stepper--wrapper {
+  padding-right: 3.13rem;
+  width: 100%;
+}
+
+.form-grid--stepper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  gap: 1rem;
+  padding-right: 3.13rem;
+
+  @include from(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-grid--documents {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.form__inner-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__inner-grid--row {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @include from(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Language inputs
+
+.language-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.language-inputs__container {
+  display: flex;
+  border: 1px solid $ecotec-gray;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  padding: 2rem;
+  position: relative;
+}
+
+.language-inputs__number {
+  span.close-text {
+    font-size: 0.9rem !important;
+  }
+
+  span.close-icon {
+    color: #ff616d;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  span:first-child {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    background-color: $ecotec-skyblue;
+    border-radius: 50%;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: -12px;
+    left: -12px;
+  }
+}
+
+.language-inputs__fields {
+  flex: 1;
+}
+
+// Social media inputs
+
+.social-form-group {
+  display: flex;
+  gap: 0.5rem;
+
+  @include from(lg) {
+    gap: 1rem;
+  }
+
+  .mat-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  ion-icon {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,55 @@
+.layout-container {
+  height: 100vh;
+  display: flex;
+  padding-top: var(--header-height);
+}
+
+.content-section {
+  flex: 1;
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  background-color: $bg-content;
+
+  @include from(lg) {
+    flex: 1.6;
+  }
+}
+
+.information-section {
+  flex: 1;
+  height: calc(100vh - var(--header-height));
+  display: none;
+  position: relative;
+
+  &__backgroundImg {
+    position: absolute;
+    bottom: 0;
+    right: -2rem;
+    background-color: transparent;
+    height: 70%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  @include from(lg) {
+    display: block;
+  }
+}
+
+// Inner containers
+.information-section__content {
+  padding: 2rem;
+  padding-top: 3rem;
+
+  @include from(xlg) {
+    padding-left: 20%;
+  }
+}
+
+.content-section__inner-wrapper {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}

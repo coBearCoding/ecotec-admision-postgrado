@@ -1,0 +1,76 @@
+:root {
+  --button-text: 0.9rem;
+
+  @include from(md) {
+    --button-text: 1rem;
+  }
+}
+
+.button {
+  border-width: 0;
+  cursor: pointer;
+  font-size: var(--button-text);
+  outline: 0;
+  padding: 0.5em 1.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 3px 5px rgba(#000, 0.1);
+  transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.button--rounded {
+  border-radius: 2em;
+}
+
+.button--skyblue {
+  background-color: $ecotec-skyblue;
+  color: #fff;
+
+  &:disabled {
+    background-color: lighten($ecotec-skyblue, 30);
+  }
+
+  &:hover {
+    box-shadow: 2px 5px 7px 1px rgba($ecotec-skyblue, $alpha: 0.2);
+    background-color: lighten($ecotec-skyblue, $amount: 10);
+  }
+}
+
+.button--gray {
+  background-color: $ecotec-gray;
+  color: $ecotec-darkgray;
+  box-shadow: none;
+
+  &:disabled {
+    background-color: lighten($ecotec-gray, 30);
+  }
+
+  &:hover {
+    box-shadow: 0 3px 5px rgba(#000, 0.2);
+    background-color: lighten($ecotec-gray, 10);
+  }
+}
+
+.button--plain {
+  border: 0;
+  color: $ecotec-blue;
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: none;
+}
+
+.buttons-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons-group--center {
+  justify-content: center;
+}
+
+.buttons-group--right {
+  justify-content: flex-end;
+}

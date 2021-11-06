@@ -1,0 +1,173 @@
+:root {
+  --header-height: 4rem;
+  --header-text: 0.9rem;
+
+  @include from(xlg) {
+    --header-text: 1rem;
+  }
+}
+
+header {
+  background-color: #fff;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header__container {
+  max-width: 1240px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header__container--expanded {
+  max-width: 1440px;
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  @include from(lg) {
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  @include from(xlg) {
+    gap: 2.5rem;
+  }
+}
+
+.header__logo {
+  height: 2rem;
+
+  @include from(lg) {
+    height: 2.5rem;
+  }
+}
+
+.header__icons {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @include from(xlg) {
+    gap: 2rem;
+  }
+}
+
+.header__nav {
+  list-style: none;
+  padding: 1rem 0 2rem !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @include from(lg) {
+    gap: 2rem;
+    flex-direction: row;
+    padding: 0 !important;
+  }
+}
+
+.header__link {
+  color: $ecotec-skyblue;
+}
+
+.header__text {
+  display: none;
+  font-size: var(--header-text);
+  color: $ecotec-darkgray;
+
+  a {
+    font-weight: 600;
+    color: $ecotec-skyblue;
+  }
+
+  @include from(lg) {
+    display: block;
+  }
+}
+
+.header__username {
+  display: none;
+  font-size: var(--header-text);
+  color: $ecotec-darkgray;
+  height: 3rem;
+
+  gap: 1rem;
+  align-items: center;
+
+  span {
+    font-weight: 600;
+    color: $ecotec-skyblue;
+  }
+
+  @include from(lg) {
+    display: flex;
+  }
+}
+
+// Dropdown
+
+.logout-btn-responsive {
+  @include from(lg) {
+    display: none;
+  }
+}
+
+.main-navbar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.2s;
+
+  @include from(lg) {
+    transform: scaleY(1);
+    position: static;
+    width: auto;
+  }
+}
+
+.main-navbar.showMenu {
+  transform: scaleY(1);
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 2rem;
+  color: $ecotec-skyblue;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+
+  @include from(lg) {
+    display: none;
+  }
+}

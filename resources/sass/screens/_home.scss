@@ -1,0 +1,56 @@
+:root {
+  --home-title: 1.25rem;
+  --home-description: 1rem;
+  --home-input: 1.1rem;
+
+  @include from(md) {
+    --home-title: 1.75rem;
+  }
+}
+
+.home__background {
+  height: 100vh;
+  background-color: $ecotec-lightgray;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: center center;
+
+  @include from(md) {
+    background-image: url(/images/home/home-background.png);
+  }
+}
+
+.home__content {
+  padding: 0 2rem;
+}
+
+.home__logo {
+  // max-width: 200px;
+}
+
+.home__title {
+  color: $ecotec-blue;
+  font-size: var(--home-title);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.home__description {
+  font-size: var(--home-description);
+  color: $ecotec-darkgray;
+}
+
+.home__input {
+  background-color: $ecotec-gray;
+  border-radius: 2em;
+  border-width: 0;
+  display: block;
+  font-size: var(--home-input);
+  letter-spacing: 2px;
+  outline: 0;
+  padding: 0.5em 1.5em;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  color: $ecotec-darkgray;
+}

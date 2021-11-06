@@ -1,0 +1,13 @@
+:root {
+  --toast-text: 1.1rem;
+
+  @include from(lg) {
+    --toast-text: 1.2rem;
+  }
+}
+
+.default-toast {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: var(--toast-text);
+}

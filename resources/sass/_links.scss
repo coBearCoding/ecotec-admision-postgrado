@@ -1,0 +1,37 @@
+:root {
+  --navbar-link-text: 0.9rem;
+
+  @include from(xlg) {
+    --navbar-link-text: 1rem;
+  }
+}
+
+.navbar__link {
+  font-weight: 500;
+  text-decoration: none;
+  font-size: var(--navbar-link-text);
+  // text-transform: uppercase;
+  color: $ecotec-skyblue;
+  transition: color 0.2s;
+  position: relative;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: darken($ecotec-skyblue, 20);
+  }
+
+  &.active {
+    color: $ecotec-blue;
+    font-weight: 600;
+  }
+
+  &.active::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: $ecotec-blue;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+  }
+}

@@ -1,0 +1,39 @@
+.datos-principales-screen {
+  background-image: linear-gradient(to right, #7b61ff 90%, #{$bg-content} 90%);
+}
+
+.datos-personales-screen {
+  background-image: linear-gradient(
+    to right,
+    #{$ecotec-blue} 90%,
+    #{$bg-content} 90%
+  );
+}
+
+.datos-familiares-screen {
+  background-image: linear-gradient(
+    to right,
+    #{$bg-color-1} 90%,
+    #{$bg-content} 90%
+  );
+}
+
+.datos-estudiantiles-screen {
+  background-image: linear-gradient(
+    to right,
+    #{$bg-color-2} 90%,
+    #{$bg-content} 90%
+  );
+}
+
+.experiencia-laboral-screen {
+  background-image: linear-gradient(
+    to right,
+    #{$bg-color-3} 90%,
+    #{$bg-content} 90%
+  );
+}
+
+.general-screen {
+  background-image: linear-gradient(to right, #1b67a3 90%, #{$bg-content} 90%);
+}

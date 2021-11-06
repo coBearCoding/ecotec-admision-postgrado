@@ -1,0 +1,76 @@
+// Color Variables
+// Bootstrap Color Overrides
+
+$white: #fff !default;
+$gray-100: #f8f9fc !default;
+$gray-200: #f5f5fb !default;
+$gray-300: #dddfeb !default;
+$gray-400: #dadada !default;
+$gray-500: #5e809a !default;
+$gray-600: #83919e !default;
+$gray-700: #6e707e !default;
+$gray-800: #5a5c69 !default;
+$gray-900: #3a3b45 !default;
+$black: #000 !default;
+
+$blue: #065cab !default;
+$indigo: #7b61ff !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #e74a3b !default;
+$orange: #fd7e14 !default;
+$yellow: #f6c23e !default;
+$green: #60cfae !default;
+$teal: #89c1c5 !default;
+$cyan: #01b9fc !default;
+
+$round: 25px;
+
+$body-bg: #f5f5fb;
+
+$primary: #065cab !default;
+$secondary: #01b9fc !default;
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Breakpoints
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xlg: 1440px
+);
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+// Theme
+$ecotec-blue: #0a5ca5;
+$ecotec-skyblue: #01b9fc;
+$ecotec-lightgray: #f2f2fa;
+$ecotec-gray: #e6e6ed;
+$ecotec-darkgray: #6a6868;
+$ecotec-desatured-gray: #5e809a;
+
+$bg-color-1: #60cfae;
+$bg-color-2: #89c1c5;
+$bg-color-3: #ff8c4c;
+$bg-color-4: #70b777;
+
+// Utils
+$bg-content: #f5f5fb;

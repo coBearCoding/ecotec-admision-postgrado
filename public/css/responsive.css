@@ -1,0 +1,35 @@
+.swal2-popup {
+    border-radius: 2rem !important;
+    font-size: .95em !important;
+}.swal2-styled.swal2-confirm {
+    border-radius: 2rem !important;
+}
+@media (max-width: 992px) { 
+    
+    .navbar, #mainMenu{
+        
+    }
+    #mainMenu .container{
+        justify-content: center !important;   
+        text-align: center !important;
+    }
+    #mainMenu p{
+        width: 100%;
+    }
+    body, .landingpage{
+        background-repeat:  no-repeat !important;
+        background-size:992px auto !important;
+        background-position: left bottom !important;
+    }
+    body::after, .landingpage::after{
+        width: 100% !important;
+        height: 100%  !important;
+        background-color: #fff !important;
+    }
+    #main{
+        /* background-color: red !important; */
+    }
+    .inner-container{
+        padding: 0;
+    }
+ }

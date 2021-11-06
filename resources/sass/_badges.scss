@@ -1,0 +1,22 @@
+.e-badge {
+  background-color: $ecotec-gray !important;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  color: $ecotec-blue !important;
+  font-weight: 600 !important;
+  box-shadow: 0 3px 5px rgba($ecotec-gray, 0.1);
+
+  label {
+    margin: 0 !important;
+  }
+}
+
+.e-badge--flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.e-badge-check {
+  width: 16px;
+  margin-top: 0.25rem;
+}

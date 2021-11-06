@@ -1,0 +1,11 @@
+.login__background {
+  height: 100vh;
+  background-color: $ecotec-lightgray;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: center center;
+
+  @include from(md) {
+    background-image: url(/images/login/login-background.png);
+  }
+}
